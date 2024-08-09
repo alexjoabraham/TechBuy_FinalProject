@@ -80,6 +80,48 @@ body {
 .login-page-background {
     padding: 100px;
 }
+
+.products-page-background {
+    padding: 60px;
+}
+
+.center-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.mobile-card {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+}
+
+.card-img-left {
+    flex: 0 0 222px;
+}
+
+.card-img-left img {
+        width: auto;
+        height: 345px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
