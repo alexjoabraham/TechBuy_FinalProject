@@ -21,7 +21,7 @@ namespace TechBuy_FinalProject
         {
             string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["TechBuyConnectionString"].ConnectionString;
             string query = @"
-        SELECT TOP 3 m.MobileId, m.Title, m.Image, m.Price, b.BrandName
+        SELECT TOP 4 m.MobileId, m.Title, m.Image, m.Price, b.BrandName
         FROM Mobiles m
         JOIN Brands b ON m.BrandId = b.BrandId";
 
