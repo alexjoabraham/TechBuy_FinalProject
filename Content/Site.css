@@ -76,6 +76,10 @@ body {
 .about-us-section {
     margin-bottom: 30px;
 }
+
+.login-page-background {
+    padding: 100px;
+}
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
