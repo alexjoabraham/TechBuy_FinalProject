@@ -29,6 +29,7 @@ namespace TechBuy_FinalProject
             }
             else
             {
+                EmptyMessage.Visible = false; // Hide the empty message
                 var groupedCart = cart.GroupBy(m => m.MobileId)
                                       .Select(g => new Mobile
                                       {
@@ -45,16 +46,11 @@ namespace TechBuy_FinalProject
             }
         }
 
+
         private void ShowEmptyMessage()
         {
-            if (CartRepeater.Controls.Count > 0 && CartRepeater.Controls[0].Controls.Count > 0)
-            {
-                var emptyMessage = CartRepeater.Controls[0].FindControl("EmptyMessage") as Literal;
-                if (emptyMessage != null)
-                {
-                    emptyMessage.Text = "<p class='empty-message'>Your cart is empty.</p>";
-                }
-            }
+            EmptyMessage.Text = "<p class='empty-message'>Your cart is empty.</p>";
+            EmptyMessage.Visible = true; // Ensure the message is visible
         }
 
         protected void RemoveButton_Click(object sender, EventArgs e)

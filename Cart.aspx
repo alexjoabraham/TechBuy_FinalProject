@@ -5,6 +5,10 @@
         <div class="container mt-5">
             <h1 class="display-4 text-center mb-4">Your Shopping Cart</h1>
 
+            <div id="EmptyMessageContainer" class="empty-message-container">
+                <asp:Literal ID="EmptyMessage" runat="server" Text="" />
+            </div>
+
             <asp:Repeater ID="CartRepeater" runat="server">
                 <HeaderTemplate>
                     <table class="table table-striped cart-table">
@@ -36,8 +40,7 @@
                 </ItemTemplate>
                 <FooterTemplate>
                     </tbody>
-            </table>
-            <asp:Literal ID="EmptyMessage" runat="server" Text="" />
+                </table>
                 </FooterTemplate>
             </asp:Repeater>
 
@@ -51,3 +54,4 @@
         </div>
     </div>
 </asp:Content>
+

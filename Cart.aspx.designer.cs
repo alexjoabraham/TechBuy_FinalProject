@@ -15,6 +15,15 @@ namespace TechBuy_FinalProject
     {
 
         /// <summary>
+        /// EmptyMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal EmptyMessage;
+
+        /// <summary>
         /// CartRepeater control.
         /// </summary>
         /// <remarks>
