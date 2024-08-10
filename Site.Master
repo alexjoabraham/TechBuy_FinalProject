@@ -8,10 +8,8 @@
     <title><%: Page.Title %> - TechBuy</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link href="~/Content/styles.css" rel="stylesheet" />
     <link href="~/Content/Site.css" rel="stylesheet" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -58,14 +56,16 @@
             </div>
         </nav>
 
-        <asp:ContentPlaceHolder ID="MainContent" runat="server">
-        </asp:ContentPlaceHolder>
+        <div class="d-flex flex-column min-vh-100">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
 
-        <footer class="py-5">
-            <div class="container px-4 px-lg-5">
-                <div class="small text-center">Copyright &copy; 2024 - TechBuy</div>
-            </div>
-        </footer>
+            <footer class="py-5 mt-auto">
+                <div class="container px-4 px-lg-5">
+                    <div class="small text-center">Copyright &copy; 2024 - TechBuy</div>
+                </div>
+            </footer>
+        </div>
 
         <asp:PlaceHolder runat="server">
             <%: Scripts.Render("~/Scripts/bootstrap.js") %>
