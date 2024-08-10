@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Web.UI.WebControls;
 using TechBuy_FinalProject.Model;
 
@@ -134,12 +135,23 @@ namespace TechBuy_FinalProject
                                     Description = reader["Description"].ToString(),
                                     BrandId = reader["BrandId"].ToString(),
                                     Image = reader["Image"].ToString(),
-                                    Price = Convert.ToDecimal(reader["Price"])
+                                    Price = Convert.ToDecimal(reader["Price"]),
+                                    Quantity = quantity // Set the selected quantity
                                 };
+
                                 var cart = Session["Cart"] as List<Mobile> ?? new List<Mobile>();
 
-                                for (int i = 0; i < quantity; i++)
+                                // Check if the item already exists in the cart
+                                var existingItem = cart.FirstOrDefault(m => m.MobileId == mobile.MobileId);
+
+                                if (existingItem != null)
                                 {
+                                    // Update the quantity if the item exists
+                                    existingItem.Quantity += quantity;
+                                }
+                                else
+                                {
+                                    // Add the item to the cart if it doesn't exist
                                     cart.Add(mobile);
                                 }
 
