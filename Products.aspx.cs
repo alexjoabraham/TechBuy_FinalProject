@@ -19,6 +19,10 @@ namespace TechBuy_FinalProject
                 {
                     WelcomeMessage.Text = $"<h4 class='welcome-message'>Welcome, {username}!</h4>";
                 }
+                else
+                {
+                    WelcomeMessage.Text = "<h4 class='welcome-message'>Welcome, Guest!</h4>";
+                }
 
                 // Load brands on initial page load
                 LoadBrands();

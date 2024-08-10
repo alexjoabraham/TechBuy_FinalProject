@@ -30,6 +30,10 @@ namespace TechBuy_FinalProject
 
                     if (role != null)
                     {
+                        // Store the username in session
+                        Session["Username"] = username;
+
+                        // Redirect based on role
                         if (role.ToString() == "Admin")
                         {
                             Response.Redirect("~/Admin.aspx");
@@ -47,6 +51,7 @@ namespace TechBuy_FinalProject
                 }
             }
         }
+
 
         protected void RegisterButton_Click(object sender, EventArgs e)
         {
