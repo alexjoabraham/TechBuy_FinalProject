@@ -16,7 +16,7 @@
                             <tr>
                                 <th>Image</th>
                                 <th>Title</th>
-                                <th>Brand</th>
+                                <th>Description</th>
                                 <th>Price</th>
                                 <th>Quantity</th>
                                 <th>Actions</th>
