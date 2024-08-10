@@ -156,6 +156,7 @@
     <Content Include="Image\redminote12.jpg" />
     <Content Include="Image\reno8.jpg" />
     <Content Include="LoginRegister.aspx" />
+    <Content Include="Order.aspx" />
     <Content Include="Products.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -261,6 +262,14 @@
       <DependentUpon>LoginRegister.aspx</DependentUpon>
     </Compile>
     <Compile Include="Model\Mobile.cs" />
+    <Compile Include="Model\OrderDetails.cs" />
+    <Compile Include="Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Products.aspx.cs">
       <DependentUpon>Products.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

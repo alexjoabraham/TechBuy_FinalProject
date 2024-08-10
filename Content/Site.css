@@ -1,5 +1,19 @@
-﻿.navbar {
+﻿body, p {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.heading {
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+}
+
+
+.navbar {
     background: linear-gradient(to right, #460201, #dc3545);
+    font-family: 'Lato', sans-serif;
 }
 
 footer {
@@ -130,7 +144,7 @@ html {
     overflow-y: scroll;
 }
 
-.checkout-page-background {
+.checkout-page-background, .order-page-background {
     padding: 60px;
 }
 
