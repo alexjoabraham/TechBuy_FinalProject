@@ -46,12 +46,13 @@
                         <li class="nav-item"><a class="nav-link me-lg-3 text-white" runat="server" href="~/">Home</a></li>
                         <li class="nav-item"><a class="nav-link me-lg-3 text-white" runat="server" href="~/Products">Products</a></li>
                         <li class="nav-item"><a class="nav-link me-lg-3 text-white" runat="server" href="~/Cart">Cart</a></li>
-                        <a class="btn btn-light rounded-pill px-3 mb-2 mb-lg-0" href="/LoginRegister">
+                        <a id="LoginLogoutButton" runat="server" class="btn btn-light rounded-pill px-3 mb-2 mb-lg-0">
                             <span class="d-flex align-items-center">
-                                <i class="bi-box-arrow-in-right me-2"></i>
-                                <span class="small">Login</span>
+                                <i id="LoginLogoutIcon" runat="server" class="bi-box-arrow-in-right me-2"></i>
+                                <span id="LoginLogoutText" runat="server" class="small">Login</span>
                             </span>
                         </a>
+
                     </ul>
                 </div>
             </div>

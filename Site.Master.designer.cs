@@ -15,6 +15,33 @@ namespace TechBuy_FinalProject
     {
 
         /// <summary>
+        /// LoginLogoutButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor LoginLogoutButton;
+
+        /// <summary>
+        /// LoginLogoutIcon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl LoginLogoutIcon;
+
+        /// <summary>
+        /// LoginLogoutText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl LoginLogoutText;
+
+        /// <summary>
         /// MainContent control.
         /// </summary>
         /// <remarks>
