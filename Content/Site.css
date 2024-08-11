@@ -144,8 +144,51 @@ html {
     overflow-y: scroll;
 }
 
-.checkout-page-background, .order-page-background {
+.checkout-page-background, .order-page-background, .admin-page-background {
     padding: 60px;
+}
+
+.minimalist-table {
+    border: none;
+    width: 100%;
+}
+
+.minimalist-table th, .minimalist-table td {
+    border: none;
+    padding: 8px;
+    text-align: left;
+}
+
+.minimalist-table th {
+    background-color: #f2f2f2;
+}
+
+.mobile-management-container {
+    /*display: flex;*/
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.grid-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.grid-item {
+    flex: 1 1 48%;
+}
+
+.pagerStyle a, .pagerStyle span {
+    margin-left: 1em;
+}
+
+.pagerStyle a {
+    text-decoration: none;
+}
+
+.pagerStyle span {
+    font-weight: bold;
 }
 
 /* Wrapping element */
