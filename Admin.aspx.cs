@@ -8,6 +8,15 @@ namespace TechBuy_FinalProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Check if the user has the Admin role
+            if (Session["UserRole"] == null || !Session["UserRole"].ToString().Equals("Admin", StringComparison.OrdinalIgnoreCase))
+            {
+                // Display a message and then redirect
+                string script = "alert('You do not have the necessary admin privileges to access this page.'); window.location.href = '" + ResolveUrl("~/LoginRegister.aspx") + "';";
+                ClientScript.RegisterStartupScript(this.GetType(), "redirect", script, true);
+                return;
+            }
+
             if (!IsPostBack)
             {
                 // Initial data binding

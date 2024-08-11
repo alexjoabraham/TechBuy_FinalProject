@@ -160,11 +160,10 @@ html {
 }
 
 .minimalist-table th {
-    background-color: #f2f2f2;
+    background-color: #b5b3b3;
 }
 
 .mobile-management-container {
-    /*display: flex;*/
     justify-content: space-between;
     flex-wrap: wrap;
 }

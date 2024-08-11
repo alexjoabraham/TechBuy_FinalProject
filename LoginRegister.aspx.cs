@@ -32,6 +32,7 @@ namespace TechBuy_FinalProject
                     {
                         // Store the username in session
                         Session["Username"] = username;
+                        Session["UserRole"] = role.ToString();
 
                         // Redirect based on role
                         if (role.ToString() == "Admin")
