@@ -27,7 +27,7 @@
 
                 <div class="col-md-3 mb-4 ms-5">
                     <div class="card shadow-lg border-0 rounded-lg">
-                        <div class="card-header bg-success text-light">
+                        <div class="card-header bg-danger text-light">
                             <h2 class="card-title text-center">Register</h2>
                         </div>
                         <div class="card-body">
@@ -47,7 +47,7 @@
                                 </asp:DropDownList>
                             </div>
                             <div class="d-flex justify-content-center">
-                                <asp:Button ID="RegisterButton" runat="server" Text="Register" CssClass="btn btn-success mx-2" OnClick="RegisterButton_Click" />
+                                <asp:Button ID="RegisterButton" runat="server" Text="Register" CssClass="btn btn-danger mx-2" OnClick="RegisterButton_Click" />
                             </div>
                         </div>
                     </div>
