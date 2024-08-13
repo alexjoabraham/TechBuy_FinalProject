@@ -109,7 +109,7 @@
             <!-- Add New Brand -->
             <h2 class="text-center mb-4 mt-5">Add New Brand</h2>
             <div class="row">
-                <div class="col-lg-4 offset-lg-4">
+                <div style="margin-left:39%">
                     <asp:TextBox ID="NewBrandIdTextBox" runat="server" CssClass="form-control" Placeholder="Enter new brand ID"></asp:TextBox>
                     <asp:TextBox ID="NewBrandNameTextBox" runat="server" CssClass="form-control mt-2" Placeholder="Enter new brand name"></asp:TextBox>
                     <asp:Button ID="AddBrandButton" runat="server" Text="Add Brand" CssClass="btn btn-primary btn-block mt-2" OnClick="AddBrandButton_Click" />

@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="Check Out - TechBuy" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Checkout.aspx.cs" Inherits="TechBuy_FinalProject.Checkout" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <style>
+        .error-message{
+            color:red;
+        }
+    </style>
     <div class="checkout-page-background">
         <div class="container mt-5">
             <h1 class="display-4 text-center mb-4">Check Out</h1>

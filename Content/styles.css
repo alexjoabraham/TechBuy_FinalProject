@@ -779,6 +779,9 @@ progress {
     font-size: 0.875em;
     color: var(--bs-secondary-color);
 }
+.error-message{
+    color: red;
+}
 
 .container,
 .container-fluid,
