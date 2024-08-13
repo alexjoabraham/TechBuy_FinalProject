@@ -3,7 +3,6 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="products-page-background">
         <div class="container mt-5">
-            <h1 class="display-4 text-center mb-4">Welcome to TechBuy</h1>
             <asp:Literal ID="WelcomeMessage" runat="server"></asp:Literal>
 
             <h2 class="text-center mb-4">Our Products</h2>
