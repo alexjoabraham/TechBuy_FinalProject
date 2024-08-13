@@ -17,14 +17,12 @@ namespace TechBuy_FinalProject
                 {
                     OrderDetails = (OrderDetails)Session["OrderDetails"];
 
-                    // Retrieve purchased items
                     var purchasedItems = Session["PurchasedItems"] as List<Mobile>;
                     if (purchasedItems != null && purchasedItems.Count > 0)
                     {
                         OrderRepeater.DataSource = purchasedItems;
                         OrderRepeater.DataBind();
 
-                        // Calculate total amount
                         TotalAmount = 0;
                         foreach (var item in purchasedItems)
                         {
@@ -34,8 +32,6 @@ namespace TechBuy_FinalProject
                     }
                     else
                     {
-                        // Handle case with no purchased items
-                        //PurchasedProductsSection.Visible = false;
                         NoPurchasedProductsMessage.Visible = true;
                     }
                 }

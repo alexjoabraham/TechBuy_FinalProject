@@ -157,7 +157,6 @@
                 </div>
             </div>
 
-            <!-- Optional Data Section -->
             <asp:DropDownList ID="OptionalData" runat="server" CssClass="form-control" Visible="false"></asp:DropDownList>
             <asp:RadioButtonList ID="ContactMethod" runat="server" CssClass="form-control" Visible="false"></asp:RadioButtonList>
         </div>

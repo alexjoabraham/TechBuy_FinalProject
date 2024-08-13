@@ -8,10 +8,8 @@ namespace TechBuy_FinalProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Check if the user has the Admin role
             if (Session["UserRole"] == null || !Session["UserRole"].ToString().Equals("Admin", StringComparison.OrdinalIgnoreCase))
             {
-                // Display a message and then redirect
                 string script = "alert('You do not have the necessary admin privileges to access this page.'); window.location.href = '" + ResolveUrl("~/LoginRegister.aspx") + "';";
                 ClientScript.RegisterStartupScript(this.GetType(), "redirect", script, true);
                 return;
@@ -19,7 +17,6 @@ namespace TechBuy_FinalProject
 
             if (!IsPostBack)
             {
-                // Initial data binding
                 BindBrands();
                 BindMobiles();
                 BindBrandDropDownLists();
@@ -66,7 +63,6 @@ namespace TechBuy_FinalProject
             }
             catch (Exception ex)
             {
-                // Handle any exceptions that occur during data binding
                 Console.WriteLine("Error binding brands: " + ex.Message);
             }
         }
@@ -75,25 +71,21 @@ namespace TechBuy_FinalProject
         {
             try
             {
-                //MobilesGridView.DataSource = MobilesSqlDataSource;
                 MobilesGridView.DataBind();
             }
             catch (Exception ex)
             {
-                // Handle any exceptions that occur during data binding
                 Console.WriteLine("Error binding mobiles: " + ex.Message);
             }
         }
 
         protected void BrandDropDownList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Re-bind the mobiles when the selected brand changes
             MobileDataList.DataBind();
         }
 
         protected void MobileDataList_ItemDataBound(object sender, DataListItemEventArgs e)
         {
-            // Only render the row if the data item is not null
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
             {
                 if (e.Item.DataItem == null || DataBinder.Eval(e.Item.DataItem, "Title") == DBNull.Value)
@@ -283,7 +275,6 @@ namespace TechBuy_FinalProject
 
         protected void MobileDetailsView_ModeChanging(object sender, DetailsViewModeEventArgs e)
         {
-            // Switch between modes
             if (e.NewMode == DetailsViewMode.Edit || e.NewMode == DetailsViewMode.Insert)
             {
                 MobileDetailsView.ChangeMode(e.NewMode);
@@ -322,7 +313,6 @@ namespace TechBuy_FinalProject
         {
             try
             {
-                // Retrieve values from the DetailsView controls
                 string mobileId = e.Values["mobileId"].ToString();
                 string title = e.Values["Title"]?.ToString();
                 string description = e.Values["Description"]?.ToString();
@@ -330,14 +320,12 @@ namespace TechBuy_FinalProject
                 string image = e.Values["Image"]?.ToString();
                 decimal price;
 
-                // Retrieve BrandId directly from DropDownList
                 DropDownList brandDropDownList = (DropDownList)MobileDetailsView.FindControl("BrandDropDownList");
                 if (brandDropDownList != null)
                 {
                     brandId = brandDropDownList.SelectedValue;
                 }
 
-                // Check for null or empty values and handle them accordingly
                 if (string.IsNullOrEmpty(title))
                 {
                     throw new ArgumentNullException("Title", "Title cannot be null or empty.");
@@ -355,7 +343,6 @@ namespace TechBuy_FinalProject
                     throw new ArgumentException("Price is invalid or cannot be parsed.");
                 }
 
-                // Set parameters for the SqlDataSource
                 MobilesSqlDataSource.InsertParameters["MobileId"].DefaultValue = mobileId;
                 MobilesSqlDataSource.InsertParameters["Title"].DefaultValue = title;
                 MobilesSqlDataSource.InsertParameters["Description"].DefaultValue = description;
@@ -363,16 +350,13 @@ namespace TechBuy_FinalProject
                 MobilesSqlDataSource.InsertParameters["BrandId"].DefaultValue = brandId;
                 MobilesSqlDataSource.InsertParameters["Image"].DefaultValue = image;
 
-                // Execute insert operation
                 MobilesSqlDataSource.Insert();
 
-                // Change mode and rebind
                 MobileDetailsView.ChangeMode(DetailsViewMode.ReadOnly);
                 MobilesGridView.DataBind();
             }
             catch (Exception ex)
             {
-                // Log and show the error
                 Console.WriteLine("Error inserting mobile: " + ex.Message);
             }
         }

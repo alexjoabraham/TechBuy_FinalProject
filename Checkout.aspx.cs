@@ -9,7 +9,6 @@ namespace TechBuy_FinalProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Check if the user is logged in
             if (Session["Username"] == null)
             {
                 Response.Redirect("~/LoginRegister.aspx");

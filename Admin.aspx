@@ -106,7 +106,6 @@
                 </DeleteParameters>
             </asp:SqlDataSource>
 
-            <!-- Add New Brand -->
             <h2 class="text-center mb-4 mt-5">Add New Brand</h2>
             <div class="row">
                 <div style="margin-left:39%">
@@ -157,7 +156,6 @@
                             OnModeChanging="MobileDetailsView_ModeChanging" OnItemUpdating="MobileDetailsView_ItemUpdating"
                             OnItemInserting="MobileDetailsView_ItemInserting" OnItemDeleting="MobileDetailsView_ItemDeleting">
                             <Fields>
-                                <%--<asp:BoundField DataField="MobileID" HeaderText="Mobile ID" ReadOnly="True" />--%>
                                 <asp:TemplateField HeaderText="Mobile ID">
                                     <ItemTemplate>
                                         <%# Eval("MobileId") %>

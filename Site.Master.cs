@@ -15,16 +15,14 @@ namespace TechBuy_FinalProject
             {
                 if (Session["Username"] != null)
                 {
-                    // User is logged in, change button to Logout
-                    LoginLogoutButton.Attributes["href"] = "/Logout.aspx"; // or your logout logic page
-                    LoginLogoutIcon.Attributes["class"] = "bi-box-arrow-right me-2"; // Change icon to logout icon
+                    LoginLogoutButton.Attributes["href"] = "/Logout.aspx"; 
+                    LoginLogoutIcon.Attributes["class"] = "bi-box-arrow-right me-2"; 
                     LoginLogoutText.InnerText = "Logout";
                 }
                 else
                 {
-                    // User is not logged in, keep button as Login
                     LoginLogoutButton.Attributes["href"] = "/LoginRegister.aspx";
-                    LoginLogoutIcon.Attributes["class"] = "bi-box-arrow-in-right me-2"; // Ensure the icon is for login
+                    LoginLogoutIcon.Attributes["class"] = "bi-box-arrow-in-right me-2"; 
                     LoginLogoutText.InnerText = "Login";
                 }
             }

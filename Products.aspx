@@ -10,7 +10,6 @@
             <asp:Label ID="MessageLabel" runat="server" CssClass="message text-center" />
 
             <div class="row mb-4">
-                <!-- Dropdowns Column -->
                 <div class="col-md-3 mb-3">
                     <asp:DropDownList ID="BrandDropDown" runat="server" CssClass="form-select" AutoPostBack="true" OnSelectedIndexChanged="BrandDropDown_SelectedIndexChanged">
                         <asp:ListItem Text="Select Brand" Value="0" />
@@ -22,7 +21,6 @@
                     </asp:DropDownList>
                 </div>
 
-                <!-- Cards Column -->
                 <div class="col-md-6">
                     <div class="center-card-container">
                         <asp:Repeater ID="MobilesRepeater" runat="server" DataSourceID="MobilesByBrandSqlDataSource">

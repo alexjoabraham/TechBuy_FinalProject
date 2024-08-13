@@ -24,9 +24,8 @@ namespace TechBuy_FinalProject
                     WelcomeMessage.Text = "<h4 class='welcome-message'>Welcome, Guest!</h4>";
                 }
 
-                // Load brands on initial page load
                 LoadBrands();
-                MobileDropDown.Enabled = false; // Initially disable the Mobile dropdown
+                MobileDropDown.Enabled = false; 
             }
         }
 
@@ -140,22 +139,19 @@ namespace TechBuy_FinalProject
                                     BrandId = reader["BrandId"].ToString(),
                                     Image = reader["Image"].ToString(),
                                     Price = Convert.ToDecimal(reader["Price"]),
-                                    Quantity = quantity // Set the selected quantity
+                                    Quantity = quantity 
                                 };
 
                                 var cart = Session["Cart"] as List<Mobile> ?? new List<Mobile>();
 
-                                // Check if the item already exists in the cart
                                 var existingItem = cart.FirstOrDefault(m => m.MobileId == mobile.MobileId);
 
                                 if (existingItem != null)
                                 {
-                                    // Update the quantity if the item exists
                                     existingItem.Quantity += quantity;
                                 }
                                 else
                                 {
-                                    // Add the item to the cart if it doesn't exist
                                     cart.Add(mobile);
                                 }
 

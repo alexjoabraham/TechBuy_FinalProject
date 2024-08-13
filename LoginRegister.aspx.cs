@@ -30,11 +30,9 @@ namespace TechBuy_FinalProject
 
                     if (role != null)
                     {
-                        // Store the username in session
                         Session["Username"] = username;
                         Session["UserRole"] = role.ToString();
 
-                        // Redirect based on role
                         if (role.ToString() == "Admin")
                         {
                             Response.Redirect("~/Admin.aspx");
@@ -46,7 +44,6 @@ namespace TechBuy_FinalProject
                     }
                     else
                     {
-                        // Handle invalid login
                         Response.Write("<script>alert('Invalid username or password');</script>");
                     }
                 }

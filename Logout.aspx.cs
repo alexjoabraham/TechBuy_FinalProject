@@ -11,14 +11,12 @@ namespace TechBuy_FinalProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Clear the session and log out the user
             Session.Clear();
             Session.Abandon();
         }
 
         protected void LoginAgainButton_Click(object sender, EventArgs e)
         {
-            // Redirect to LoginRegister.aspx
             Response.Redirect("~/LoginRegister.aspx");
         }
     }

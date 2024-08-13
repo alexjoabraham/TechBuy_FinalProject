@@ -26,11 +26,11 @@ namespace TechBuy_FinalProject
                 CartRepeater.DataSource = null;
                 CartRepeater.DataBind();
                 ShowEmptyMessage();
-                CheckoutButton.Enabled = false; // Disable the checkout button if cart is empty
+                CheckoutButton.Enabled = false; 
             }
             else
             {
-                EmptyMessage.Visible = false; // Hide the empty message
+                EmptyMessage.Visible = false; 
                 var groupedCart = cart.GroupBy(m => m.MobileId)
                                       .Select(g => new Mobile
                                       {
@@ -44,25 +44,25 @@ namespace TechBuy_FinalProject
 
                 CartRepeater.DataSource = groupedCart;
                 CartRepeater.DataBind();
-                CheckoutButton.Enabled = true; // Enable the checkout button if cart is not empty
+                CheckoutButton.Enabled = true; 
             }
         }
 
         private void ShowEmptyMessage()
         {
             EmptyMessage.Text = "<p class='empty-message'>Your cart is empty.</p>";
-            EmptyMessage.Visible = true; // Ensure the message is visible
+            EmptyMessage.Visible = true; 
         }
 
         protected void RemoveButton_Click(object sender, EventArgs e)
         {
             var button = (Button)sender;
-            var mobileId = button.CommandArgument; // Ensure CommandArgument is parsed to an integer
+            var mobileId = button.CommandArgument; 
             var cart = Session["Cart"] as List<Mobile>;
 
             if (cart != null)
             {
-                cart.RemoveAll(m => m.MobileId == mobileId); // Compare integers now
+                cart.RemoveAll(m => m.MobileId == mobileId); 
                 Session["Cart"] = cart;
                 BindCart();
             }

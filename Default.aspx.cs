@@ -38,10 +38,10 @@ namespace TechBuy_FinalProject
                             mobiles.Add(new Mobile
                             {
                                 MobileId = reader["MobileId"].ToString(),
-                                Title = reader["Title"].ToString(), // Update this to the correct column name
+                                Title = reader["Title"].ToString(), 
                                 Image = reader["Image"].ToString(),
                                 Price = Convert.ToDecimal(reader["Price"]),
-                                BrandId = reader["BrandName"].ToString() // Adjust if needed
+                                BrandId = reader["BrandName"].ToString() 
                             });
                         }
 
