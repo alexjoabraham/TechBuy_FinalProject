@@ -13,5 +13,41 @@ namespace TechBuy_FinalProject
 
     public partial class Order
     {
+
+        /// <summary>
+        /// OrderRepeater control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater OrderRepeater;
+
+        /// <summary>
+        /// TotalAmountLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TotalAmountLabel;
+
+        /// <summary>
+        /// ContinueShoppingButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ContinueShoppingButton;
+
+        /// <summary>
+        /// NoPurchasedProductsMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label NoPurchasedProductsMessage;
     }
 }

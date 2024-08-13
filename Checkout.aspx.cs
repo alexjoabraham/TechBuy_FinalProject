@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using TechBuy_FinalProject.Model;
 
 namespace TechBuy_FinalProject
@@ -41,6 +40,8 @@ namespace TechBuy_FinalProject
             };
 
             Session["OrderDetails"] = orderDetails;
+
+            Session["PurchasedItems"] = Session["Cart"];
 
             Session["Cart"] = null;
 
