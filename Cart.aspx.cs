@@ -26,6 +26,7 @@ namespace TechBuy_FinalProject
                 CartRepeater.DataSource = null;
                 CartRepeater.DataBind();
                 ShowEmptyMessage();
+                CheckoutButton.Enabled = false; // Disable the checkout button if cart is empty
             }
             else
             {
@@ -43,9 +44,9 @@ namespace TechBuy_FinalProject
 
                 CartRepeater.DataSource = groupedCart;
                 CartRepeater.DataBind();
+                CheckoutButton.Enabled = true; // Enable the checkout button if cart is not empty
             }
         }
-
 
         private void ShowEmptyMessage()
         {
